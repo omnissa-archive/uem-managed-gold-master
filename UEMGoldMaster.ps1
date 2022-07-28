@@ -175,7 +175,7 @@ function Install-UemAgent {
             Write-Error "Cannot find ${agentMsiPath}"
         }
         Write-Host "Installing UEM agent"
-        msiexec /i $AgentMsiPath /qn /L*V (Join-Path -Path $PSScriptRoot -ChildPath "AirwatchAgent.msi.log") ENROLL=Y SERVER=$enrollmentUrl LGNAME=$enrollmentOG USERNAME=$enrollmentUsername PASSWORD=$enrollmentPassword ASSIGNTOLOGGEDINUSER=y
+        msiexec /i $AgentMsiPath /qn /L*V (Join-Path -Path $PSScriptRoot -ChildPath "AirwatchAgent.msi.log") ENROLL=Y SERVER=$enrollmentUrl LGNAME=$enrollmentOG USERNAME=$enrollmentUsername PASSWORD=$enrollmentPassword
     }
 }
 
